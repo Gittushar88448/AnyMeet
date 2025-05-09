@@ -16,7 +16,7 @@ const Dashboard = () =>{
     e.preventDefault();
     if (meetingCode.trim()) {
       try {
-        const response = await axios.post('http://localhost:8000/api/v1/add-history',{meetingCode},{ headers: { Authorization: `Bearer ${token}`} } );
+        const response = await axios.post(`${server}/api/v1/add-history`,{meetingCode},{ headers: { Authorization: `Bearer ${token}`} } );
         if(response.data){
           console.log('history added');
         }

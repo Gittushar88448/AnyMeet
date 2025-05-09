@@ -3,6 +3,7 @@ import { FiClock, FiCopy, FiTrash2 } from 'react-icons/fi';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import toast from 'react-hot-toast';
+import server from '../environment';
 
 const HistoryPage = () => {
     const [meetings, setMeetings] = useState([]);
@@ -19,7 +20,7 @@ const HistoryPage = () => {
         const getUserHistory = async () => {
             try {
                 const token = localStorage.getItem('token');
-                const response = await axios.get('http://localhost:8000/api/v1/get-history', {
+                const response = await axios.get(`${server}/api/v1/get-history`, {
                     params: {
                         token: token
                     }

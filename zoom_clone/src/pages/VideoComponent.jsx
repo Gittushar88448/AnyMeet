@@ -9,6 +9,7 @@ import { MdOutlineScreenShare } from "react-icons/md";
 import { MdOutlineStopScreenShare } from "react-icons/md";
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import server from '../environment';
 
 const connections = {};
 const iceCandidatesQueue = {};
@@ -21,7 +22,7 @@ const peerConfigConnections = {
     ]
 };
 const VideoComponent = () => {
-    const server_url = "http://localhost:8000";
+    const server_url = server;
     const socketRef = useRef();
     let socketIdRef = useRef();
     let localVideoRef = useRef();
