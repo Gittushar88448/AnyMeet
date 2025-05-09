@@ -5,6 +5,7 @@ import { FaSignInAlt } from 'react-icons/fa';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import Signup from './Signup';
+import server from '../environment';
 
 const Login = ({setCurrentTab}) => {
   const [formData, setFormData] = useState({
@@ -30,7 +31,7 @@ const Login = ({setCurrentTab}) => {
     setIsLoading(true);
     
     try {
-      const response = await axios.post('http://localhost:8000/api/v1/login', formData);
+      const response = await axios.post(`${server}/api/v1/login`, formData);
   
       if (response.data.user) {
         localStorage.setItem('token', JSON.stringify(response.data.user.access_token));

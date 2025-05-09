@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FaEye, FaEyeSlash, FaUser, FaEnvelope, FaLock, FaUserPlus } from 'react-icons/fa';
 import axios from "axios";
 import { useNavigate } from 'react-router-dom';
+import server from '../environment';
 
 const Signup = ({setCurrentTab}) => {
   const navigate = useNavigate();
@@ -57,7 +58,7 @@ const Signup = ({setCurrentTab}) => {
 
   const sendOTP = async (email) => {
     try {
-      const response = await axios.post('http://localhost:8000/api/v1/send-otp', { email });
+      const response = await axios.post(`${server}/api/v1/send-otp`, { email });
       
       if(response.data.newOtp){
         return response.data.newOtp;

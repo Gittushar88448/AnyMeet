@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { RxCountdownTimer } from "react-icons/rx";
 import { BiArrowBack } from "react-icons/bi";
 import { Link } from 'react-router-dom';
+import server from '../environment';
 
 const EmailVerification = () => {
     const [otp, setOtp] = useState('');
@@ -35,7 +36,7 @@ const EmailVerification = () => {
 
     const dispatchOtpAgain = async(email) => {
         try{
-            const response = await axios.post('http://localhost:8000/api/v1/send-otp', {
+            const response = await axios.post(`${server}/api/v1/send-otp`, {
                 email
               });
           
@@ -49,7 +50,7 @@ const EmailVerification = () => {
 
     const dispatchSignupCall = async() => {
         try{
-            const response = await axios.post('http://localhost:8000/api/v1/signup', signupData);
+            const response = await axios.post(`${server}/api/v1/signup`, signupData);
             const {newUser} = response.data;
             if(response.data.status === false){
                 console.log(response.data.message)
