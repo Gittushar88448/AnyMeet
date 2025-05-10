@@ -553,7 +553,7 @@ const VideoComponent = () => {
             >
               {/* Local Video */}
               <motion.div
-                className="rounded-lg absolute bottom-14 w-[20vw] left-4 shadow-xl z-10"
+                className="rounded-lg absolute bottom-20 w-[20vw] left-4 shadow-xl z-10"
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
               >
@@ -622,7 +622,7 @@ const VideoComponent = () => {
               <AnimatePresence>
                 {showModal && (
                   <motion.div
-                    className='h-[90%] mt-2 bg-white w-[30%] absolute right-4 rounded-xl shadow-2xl overflow-hidden'
+                    className='h-[85%] mt-2 bg-white w-[30%] absolute right-4 rounded-xl shadow-2xl overflow-hidden z-20'
                     initial={{ x: 300, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     exit={{ x: 300, opacity: 0 }}
@@ -663,7 +663,7 @@ const VideoComponent = () => {
   
                       {/* Input */}
                       <motion.div 
-                        className='absolute bottom-4 w-full'
+                        className='absolute bottom-4 w-full z-20'
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 }}

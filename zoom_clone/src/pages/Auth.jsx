@@ -11,10 +11,10 @@ const Auth = () => {
 
   const [currentTab, setCurrentTab] = useState(1)
   return (
-    <div className='min-h-screen flex justify-between items-center bg-[#f5f5f5]'>
-        <div className=' w-[80%] min-h-[60%] mx-auto flex p-6 rounded-md justify-around gap-6 shadow-lg'>
+    <div className='min-h-screen flex justify-between items-center bg-[#f5f5f5] mx-auto  rounded-md gap-6 shadow-lg'>
+        <div className=' w-[100%] sm:w-[80%] min-h-[60%] mx-auto flex py-4 md:p-6 rounded-md justify-around items-center gap-6 flex-col-reverse md:flex-row shadow-md md:shadow-none'>
             <img src='/assets/videocall.png' className='w-[40%] object-contain rounded-lg '/>
-            <div className='w-full flex flex-col gap-4 p-4'>
+            <div className='mx-auto flex flex-col gap-4 p-1 sm:p-4'>
               <div className='flex rounded-md'>
                   {
                     Tabs.map((tab) => (
