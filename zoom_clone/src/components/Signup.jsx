@@ -21,6 +21,7 @@ const Signup = ({setCurrentTab}) => {
   const [errors, setErrors] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const [err, setErr] = useState('')
+  
   const changeHandler = (event) => {
     const { name, value } = event.target;
     setFormData(prev => ({
@@ -139,7 +140,7 @@ const Signup = ({setCurrentTab}) => {
         initial="hidden"
         animate="visible"
         onSubmit={submitHandler}
-        className="bg-white p-8 rounded-xl shadow-lg"
+        className="bg-white py-4 px-1 sm:p-8 rounded-xl shadow-lg"
       >
         {/* Header */}
         <motion.div variants={itemVariants} className="flex flex-col items-center mb-8">
@@ -179,7 +180,7 @@ const Signup = ({setCurrentTab}) => {
         </AnimatePresence>
 
         {/* Name Fields */}
-        <motion.div variants={itemVariants} className="grid grid-cols-2 gap-4 mb-4">
+        <motion.div variants={itemVariants} className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
           <div>
             <label className='flex items-center text-gray-700 text-sm font-medium mb-2 gap-1'>
               <FaUser className="text-gray-400" />

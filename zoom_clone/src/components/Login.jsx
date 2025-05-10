@@ -107,7 +107,7 @@ const Login = ({setCurrentTab}) => {
         initial="hidden"
         animate="visible"
         onSubmit={submitHandler}
-        className='bg-white p-8 rounded-xl shadow-lg'
+        className='bg-white py-4 px-1 sm:p-8 rounded-xl shadow-lg'
       >
         {/* Header */}
         <motion.div variants={itemVariants} className="flex flex-col items-center mb-8">
