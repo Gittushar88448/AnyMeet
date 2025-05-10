@@ -166,15 +166,15 @@ const Home = () => {
                                 animate={{ opacity: 1, x: 0 }}
                                 exit={{ opacity: 0, x: '100%' }}
                                 transition={{ duration: 0.3 }}
-                                className="fixed inset-0 bg-gray-900 bg-opacity-95 backdrop-blur-sm flex flex-col items-center justify-center gap-8 z-40"
+                                className="fixed inset-0"
                             >
-                                <div className="flex flex-col items-center gap-6">
+                                <div className="  bg-gray-900 bg-opacity-95 backdrop-blur-sm flex flex-col gap-y-4 items-center justify-center z-40">
                                     {isLoggedIn ? (
                                         <>
                                             {/* Logged in mobile items */}
                                         </>
                                     ) : (
-                                        <>
+                                        <div className='flex flex-col gap-4'>
                                             <motion.div
                                                 initial={{ y: 20, opacity: 0 }}
                                                 animate={{ y: 0, opacity: 1 }}
@@ -201,7 +201,7 @@ const Home = () => {
                                                 <FaUserPlus />
                                                 <span>Register</span>
                                             </motion.div>
-                                        </>
+                                        </div>
                                     )}
                                     <motion.button
                                         initial={{ y: 20, opacity: 0 }}

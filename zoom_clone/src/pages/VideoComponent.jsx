@@ -622,7 +622,7 @@ const VideoComponent = () => {
               <AnimatePresence>
                 {showModal && (
                   <motion.div
-                    className='h-[85%] mt-2 bg-white w-[30%] absolute right-4 rounded-xl shadow-2xl overflow-hidden z-20'
+                    className='h-[85%] mt-2 bg-white w-[45%] sm:w-[30%] absolute right-4 rounded-xl shadow-2xl overflow-hidden z-20'
                     initial={{ x: 300, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     exit={{ x: 300, opacity: 0 }}
