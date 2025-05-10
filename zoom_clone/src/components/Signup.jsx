@@ -21,7 +21,7 @@ const Signup = ({setCurrentTab}) => {
   const [errors, setErrors] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const [err, setErr] = useState('')
-  
+
   const changeHandler = (event) => {
     const { name, value } = event.target;
     setFormData(prev => ({
@@ -133,14 +133,14 @@ const Signup = ({setCurrentTab}) => {
       initial={{ scale: 0.95, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       transition={{ duration: 0.3 }}
-      className="w-full max-w-md"
+      className="w-full"
     >
       <motion.form 
         variants={containerVariants}
         initial="hidden"
         animate="visible"
         onSubmit={submitHandler}
-        className="bg-white py-4 px-1 sm:p-8 rounded-xl shadow-lg"
+        className="bg-white py-4 px-3 sm:p-8 rounded-xl shadow-lg"
       >
         {/* Header */}
         <motion.div variants={itemVariants} className="flex flex-col items-center mb-8">
@@ -293,7 +293,7 @@ const Signup = ({setCurrentTab}) => {
             />
             <motion.button
               type="button"
-              className='absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-indigo-600'
+              className='absolute right-3 top-4 text-gray-500 hover:text-indigo-600'
               onClick={() => setShowPassword(!showPassword)}
               whileTap={{ scale: 0.9 }}
             >
@@ -335,7 +335,7 @@ const Signup = ({setCurrentTab}) => {
             />
             <motion.button
               type="button"
-              className='absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-indigo-600'
+              className='absolute right-3 top-4 text-gray-500 hover:text-indigo-600'
               onClick={() => setShowConfirmPassword(!showConfirmPassword)}
               whileTap={{ scale: 0.9 }}
             >

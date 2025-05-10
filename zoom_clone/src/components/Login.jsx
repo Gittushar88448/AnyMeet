@@ -100,14 +100,14 @@ const Login = ({setCurrentTab}) => {
       initial={{ scale: 0.95, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       transition={{ duration: 0.3 }}
-      className="w-full max-w-md"
+      className="w-full"
     >
       <motion.form 
         variants={containerVariants}
         initial="hidden"
         animate="visible"
         onSubmit={submitHandler}
-        className='bg-white py-4 px-1 sm:p-8 rounded-xl shadow-lg'
+        className='bg-white py-4 px-3 sm:p-8 rounded-xl shadow-lg'
       >
         {/* Header */}
         <motion.div variants={itemVariants} className="flex flex-col items-center mb-8">
@@ -162,7 +162,7 @@ const Login = ({setCurrentTab}) => {
             />
             <motion.button
               type="button"
-              className='absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-indigo-600'
+              className='absolute right-3 top-4 text-gray-500 hover:text-indigo-600'
               onClick={() => setShowPassword(!showPassword)}
               whileTap={{ scale: 0.9 }}
             >
