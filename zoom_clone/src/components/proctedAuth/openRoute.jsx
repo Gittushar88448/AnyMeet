@@ -1,8 +1,10 @@
 import { Navigate } from "react-router-dom";
 
 const OpenRoute = ({children}) => {
-    let token = localStorage.getItem('token');
-    if(token === ''){
+    let token = JSON.parse(localStorage.getItem('token'));
+    console.log("open route token", token);
+    
+    if(token == null || token == undefined){
         return children;
     }else{
         return <Navigate to={'/dashboard'}/>

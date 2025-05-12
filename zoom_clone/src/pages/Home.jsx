@@ -63,7 +63,7 @@ const Home = () => {
     };
 
     useEffect(() => {
-        setIsLoggedIn(!!localStorage.getItem('token'));
+        setIsLoggedIn(!!JSON.parse(localStorage.getItem('token')));
 
         const handleResize = () => {
             setWindowWidth(window.innerWidth);

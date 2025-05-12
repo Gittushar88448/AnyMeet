@@ -10,7 +10,7 @@ const Dashboard = () =>{
   const [meetingCode, setMeetingCode] = useState('');
   const [history, setHistory] = useState([]);
   const [isHovered, setIsHovered] = useState(false);
-  const token = localStorage.getItem("token");
+  const token = JSON.parse(localStorage.getItem("token"));
   const navigate = useNavigate()
 
   const handleJoinMeeting =async (e) => {
@@ -29,8 +29,8 @@ const Dashboard = () =>{
   };
 
     const logout = () => {
-    localStorage.setItem('token', '');
-    if(!localStorage.getItem("token")){
+    localStorage.setItem('token', JSON.stringify(null));
+    if(!JSON.parse(localStorage.getItem("token"))){
       navigate('/auth');
     }
   }

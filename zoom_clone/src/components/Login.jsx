@@ -38,7 +38,7 @@ const Login = ({setCurrentTab}) => {
         navigate('/dashboard');
       } else {
         setErrorMsg(response.data.message);
-        localStorage.setItem('token', null);
+        localStorage.setItem('token', JSON.stringify(null));
       }
     } catch (err) {
       if (err.response && err.response.status === 401) {
