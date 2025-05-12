@@ -19,7 +19,7 @@ const HistoryPage = () => {
     useEffect(() => {
         const getUserHistory = async () => {
             try {
-                const token = localStorage.getItem('token');
+                const token = JSON.parse(localStorage.getItem('token'));
                 const response = await axios.get(`${server}/api/v1/get-history`, {
                     params: {
                         token: token
