@@ -10,7 +10,7 @@ const Dashboard = () =>{
   const [meetingCode, setMeetingCode] = useState('');
   const [history, setHistory] = useState([]);
   const [isHovered, setIsHovered] = useState(false);
-  const token = JSON.parse(localStorage.getItem("token"));
+  const token = JSON.parse(localStorage.getItem("token"));  // only for testing purpose for best use i'll use session token 
   const navigate = useNavigate()
 
   const handleJoinMeeting =async (e) => {
@@ -135,7 +135,7 @@ const Dashboard = () =>{
           >
             <div className="relative">
               <img 
-                src="https://illustrations.popsy.co/amber/video-call.svg" 
+                src='/assets/new_home_logo.png'
                 alt="Video call illustration" 
                 className="w-full max-w-md lg:max-w-lg"
               />

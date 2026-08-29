@@ -270,7 +270,7 @@ const Home = () => {
                     className='flex-1 flex justify-center items-center relative'
                 >
                     <img
-                        src='https://illustrations.popsy.co/amber/video-call.svg'
+                        src='/assets/new_home_logo.png'
                         alt='Video call illustration'
                         className='w-full max-w-md xl:max-w-xl floating-element'
                     />
