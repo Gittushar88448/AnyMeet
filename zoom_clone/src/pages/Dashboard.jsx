@@ -135,7 +135,7 @@ const Dashboard = () =>{
           >
             <div className="relative">
               <img 
-                src='/assets/new_home_logo.png'
+                src='/assets/new_home_logo.svg'
                 alt="Video call illustration" 
                 className="w-full max-w-md lg:max-w-lg"
               />
