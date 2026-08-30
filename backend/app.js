@@ -11,7 +11,13 @@ const historyRoute = require('./routes/historyRoutes');
 
 const PORT = process.env.PORT || 8000
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://anymeet-1.onrender.com",
+    credentials: true,
+    methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE", "OPTIONS"],
+  })
+);
 app.use(express.json());
 app.use(cookieParser());
 app.use('/api/v1',userRoutes);
