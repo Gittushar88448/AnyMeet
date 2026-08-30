@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 8000
 
 app.use(
   cors({
-    origin: "https://anymeet-1.onrender.com",
+    origin: "*",
   })
 );
 const server = createServer(app);
