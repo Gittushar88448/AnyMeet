@@ -11,12 +11,7 @@ const historyRoute = require('./routes/historyRoutes');
 
 const PORT = process.env.PORT || 8000
 
-app.use(
-  cors({
-    origin: "*",
-  })
-);
-const server = createServer(app);
+app.use(cors());
 app.use(express.json());
 app.use(cookieParser());
 app.use('/api/v1',userRoutes);
@@ -28,6 +23,7 @@ app.get("/health", (req, res) => {
     message: "Server is running",
   });
 });
+const server = createServer(app);
 
 connectToSocket(server);
 dbConnect();
