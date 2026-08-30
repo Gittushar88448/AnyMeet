@@ -65,8 +65,7 @@ const Signup = ({ setCurrentTab }) => {
             "Content-Type": "application/json",
             "Access-Control-Allow-Origin": "*"
           },
-          body: email
-
+          body: {email: email}
         });
 
       if (response.data.newOtp) {
