@@ -41,7 +41,6 @@ exports.sendOtp = async (req, res) => {
             })
             checkOtp = await OTP.findOne({otp})
         };
-        console.log(otp)
         const newOtp = await OTP.create({
             otp: otp,
             email: email

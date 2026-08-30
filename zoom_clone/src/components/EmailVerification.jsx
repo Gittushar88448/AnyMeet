@@ -74,7 +74,7 @@ const EmailVerification = () => {
                 return;
               }
         }catch(err){
-            throw new Error(err)
+            throw Error(err)
         }
     }
 
@@ -83,11 +83,11 @@ const EmailVerification = () => {
             const response = await axios.post(`${server}/api/v1/signup`, signupData);
             const {newUser} = response.data;
             if(response.data.status === false){
-                console.log(response.data.message)
+                return;
             }
             return newUser;
         }catch(err){
-            throw new Error(err)
+            throw Error(err)
         }
     }
 
