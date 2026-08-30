@@ -38,7 +38,9 @@ const EmailVerification = () => {
 
     useEffect(() => {   
         try {
-            const {firstName, lastName, email, password , confirmPassword} = window.history.state.usr;
+            //for testing
+            console.log(window.history.state);
+            const {firstName, lastName, email, password , confirmPassword} = window.history.state.user;
             if (!firstName || !lastName || !email || !password || !confirmPassword ) {
                 navigate("/");
             }else{

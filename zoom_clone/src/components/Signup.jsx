@@ -80,7 +80,7 @@ const Signup = ({setCurrentTab}) => {
     setIsLoading(false);
     
     if (otpSent) {
-      navigate('/auth/verify-otp', { state: formData });
+      navigate(`${server}/auth/verify-otp`, { state: formData });
     }
   };
 
