@@ -9,11 +9,15 @@ const connectToSocket = require('./configs/socketConnection');
 const userRoutes = require('./routes/userRoutes');
 const historyRoute = require('./routes/historyRoutes');
 
-const server = createServer(app);
 const PORT = process.env.PORT || 8000
 
+app.use(
+  cors({
+    origin: "https://anymeet-1.onrender.com",
+  })
+);
+const server = createServer(app);
 app.use(express.json());
-app.use(cors());
 app.use(cookieParser());
 app.use('/api/v1',userRoutes);
 app.use('/api/v1', historyRoute)
