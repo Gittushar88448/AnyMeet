@@ -22,6 +22,13 @@ app.use(cookieParser());
 app.use('/api/v1',userRoutes);
 app.use('/api/v1', historyRoute)
 
+app.get("/health", (req, res) => {
+  res.status(200).json({
+    success: true,
+    message: "Server is running",
+  });
+});
+
 connectToSocket(server);
 dbConnect();
 
