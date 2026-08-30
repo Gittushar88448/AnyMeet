@@ -59,7 +59,12 @@ const Signup = ({setCurrentTab}) => {
 
   const sendOTP = async (email) => {
     try {
-      const response = await axios.post(`${server}/api/v1/send-otp`, { email });
+      const response = await axios.post(`${server}/api/v1/send-otp`,
+        headers = {
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*"
+        },
+        { email });
       
       if(response.data.newOtp){
         return response.data.newOtp;
