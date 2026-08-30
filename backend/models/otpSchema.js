@@ -22,7 +22,6 @@ const otpSchema = new mongoose.Schema({
 async function sendVerificationMail(email, otp){
     try{
         const sendingMail = await mailSender(email, 'Verification Mail By Zoom', otpTemplate(otp));
-        console.log(sendingMail)
         return sendingMail;
     }catch(err){
         throw err;
@@ -31,7 +30,9 @@ async function sendVerificationMail(email, otp){
 
 otpSchema.pre('save', async function(next) {
     if(this.isNew){
-         await sendVerificationMail(this.email, this.otp);
+        let infor = await sendVerificationMail(this.email, this.otp);
+        console.log("infor", infor);
+        
     }
     next();
 })
